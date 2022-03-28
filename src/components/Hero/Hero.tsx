@@ -10,8 +10,6 @@ import {
 } from '@chakra-ui/react';
 import Blob from './Blob';
 
-
-
 export default function CallToActionWithVideo() {
   return (
     <Container maxW={'7xl'}>

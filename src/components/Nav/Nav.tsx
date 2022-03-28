@@ -16,7 +16,7 @@ const Links: Array<NavLinkProps> = [
   { label: 'Sobre mim', url: '#about' },
   { label: 'Habilidades', url: '#skills' },
   { label: 'Experiencia', url: '#experience' },
-  { label: 'Educação', url: 'education' },
+  { label: 'Educação', url: '#education' },
   { label: 'Contato', url: '#contact' }
 ];
 

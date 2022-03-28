@@ -1,12 +1,15 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
+import { About, Footer, Hero, Nav } from './components';
 
 function App() {
   return (
     <ChakraProvider>
-      <div className="App">
-        Hello World.
-      </div>
+      <Nav>
+        <Hero />
+        <About />
+      </Nav>
+      <Footer />
     </ChakraProvider>
   );
 }
