@@ -1,14 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import {
   Box,
+  Button,
   Flex,
   HStack,
   IconButton,
   useDisclosure,
   useColorModeValue,
   Stack,
+  useColorMode
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import NavLink from './NavLink';
 import { NavLinkProps } from './types';
 
@@ -22,12 +24,14 @@ const Links: Array<NavLinkProps> = [
 
 
 const Nav: FunctionComponent = ({ children }) => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -36,7 +40,6 @@ const Nav: FunctionComponent = ({ children }) => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Rafael Tomás</Box>
             <HStack
               as={'nav'}
               spacing={4}
@@ -46,6 +49,13 @@ const Nav: FunctionComponent = ({ children }) => {
               ))}
             </HStack>
           </HStack>
+          <Flex alignItems={'center'}>
+            <Box p={4}>Rafael Tomás</Box>
+            <Stack direction={'row'} spacing={7} />
+            <Button onClick={toggleColorMode}>
+              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            </Button>
+          </Flex>
         </Flex>
 
         {isOpen ? (
@@ -58,8 +68,8 @@ const Nav: FunctionComponent = ({ children }) => {
           </Box>
         ) : null}
       </Box>
-
       <Box p={4}>{children}</Box>
+
     </>
   );
 };
