@@ -29,7 +29,6 @@ export default function CallToActionWithVideo() {
             h={'150%'}
             position={'absolute'}
             top={'-20%'}
-            left={0}
             zIndex={-1}
             color={useColorModeValue('cyan.50', 'cyan.400')}
           />
@@ -69,9 +68,8 @@ export default function CallToActionWithVideo() {
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
+            Estudante de Sistema de Informação, apaixonado por tecnologia desde 2003 
+            e espero que aproveite a visita! 
           </Text>
         </Stack>
       </Stack>
