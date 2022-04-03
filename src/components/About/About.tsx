@@ -26,15 +26,15 @@ const About = () => {
             Olá!
             <br />
             <br />
-            Meu nome é Rafael Tomas e apaixonado por desenvolvimento.
+            Meu nome é Rafael Tomás e sou apaixonado por desenvolvimento.<br />
+            A Web me passa a oportunidade de aprender, criar e explorar sempre mais.Costumo dizer que a web é minha 
+             &quot;outra metade&quot;.
             <br />
-            Estou sempre procurando coisas novas para aprender. A web me passa essa oportunidade de aprender, criar, explorar sempre mais, costumo dizer que a web é minha &quot;outra metade&quot;.
+            Qualquer coisa que possa me ajudar a expandir meu conhecimento é sempre bem - vinda.
             <br />
-            Qualquer coisa que possa me ajudar a expandir meu conhecimento é sempre bem-vinda.
+            Meu lema no trabalho(como na minha vida) é &quot; Você pode chegar em qualquer lugar&quot;- não digas que és incapaz, vá e tente.
             <br />
-            Meu lema no trabalho (como na minha vida) é &quot;Voce pode chegar em qualquer lugar&quot;- não diga que você e incapaz, vai e tenta.
-            <br />
-            Espero que você goste do meu portfólio :p
+            Espero que você goste do meu portfólio. : p
             <br />
             <br />
             Atenciosamente,

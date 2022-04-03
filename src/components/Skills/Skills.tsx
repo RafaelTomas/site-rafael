@@ -124,10 +124,6 @@ const Skills = () => {
                     <ListIcon as={FaCheckCircle} color="green.500" />
                     APIs
                   </ListItem>
-                  <ListItem>
-                    <ListIcon as={FaCheckCircle} color="green.500" />
-                    Deploy Heroku
-                  </ListItem>
                 </List>
               </VStack>
             </Box>
