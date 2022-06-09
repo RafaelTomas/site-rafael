@@ -12,32 +12,32 @@ import Blob from './Blob';
 
 export default function CallToActionWithVideo() {
   return (
-    <Container maxW={'7xl'}>
+    <Container maxW='8xl'>
       <Stack
-        align={'center'}
+        align='center'
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
         direction={{ base: 'column', md: 'row' }}>
         <Flex
           flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
+          justify='center'
+          align='center'
+          position='relative'
+          w='full'>
           <Blob
-            w={'150%'}
-            h={'150%'}
-            position={'absolute'}
-            top={'-20%'}
+            w='150%'
+            h='150%'
+            position='absolute'
+            top='-20%'
             zIndex={-1}
             color={useColorModeValue('cyan.50', 'cyan.400')}
           />
           <Image
-            borderRadius={'35%'}
-            alt={'Rafael Perfil Image'}
-            align={'center'}
-            w={'90%'}
-            h={'85%'}
+            borderRadius='35%'
+            alt='Rafael Perfil Image'
+            align='center'
+            w='90%'
+            h='85%'
             src="/logo.png"
           />
         </Flex>
@@ -48,8 +48,8 @@ export default function CallToActionWithVideo() {
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
-              as={'span'}
-              position={'relative'}
+              as='span'
+              position='relative'
               _after={{
                 content: '\'\'',
                 width: 'full',
@@ -63,12 +63,12 @@ export default function CallToActionWithVideo() {
               Eu sou Rafael
             </Text>
             <br />
-            <Text as={'span'} color={'cyan.400'}>
+            <Text as='span' color='cyan.400'>
               Seja bem-vindo!
             </Text>
           </Heading>
-          <Text color={'gray.500'}>
-            Estudante de Sistema de Informação, apaixonado por tecnologia desde 2003 
+          <Text color='gray.500'>
+            Estudante de Sistema de Informação, apaixonado por tecnologia desde pequeno 
             e espero que aproveite a visita! 
           </Text>
         </Stack>

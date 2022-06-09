@@ -9,7 +9,7 @@ const PriceWrapper = ({ children }: { children: ReactNode }) => {
       borderWidth="1px"
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}>
+      borderRadius='xl'>
       {children}
     </Box>
   );

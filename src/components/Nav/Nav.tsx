@@ -8,38 +8,37 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  useColorMode
+  useColorMode,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import NavLink from './NavLink';
-import { NavLinkProps } from './types';
+import { NavProps, NavLinkProps } from './types';
 
 const Links: Array<NavLinkProps> = [
-  { label: 'Sobre mim', url: '#about' },
+  { label: 'Sobre mim', url: 'about' },
   { label: 'Habilidades', url: '#skills' },
   { label: 'Experiencia', url: '#experience' },
   { label: 'Portfolio', url: '#portfolio' },
   { label: 'Contato', url: '#contact' }
 ];
 
-
-const Nav: FunctionComponent = ({ children }) => {
+const Nav: FunctionComponent<NavProps> = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={3}>
+        <Flex h={16} alignItems='center' justifyContent='space-between'>
 
           <IconButton
-            size={'md'}
+            size='md'
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
+            aria-label='Open Menu'
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={'center'}>
+          <HStack spacing={8} alignItems='center'>
             <HStack
               as={'nav'}
               spacing={4}
@@ -49,9 +48,9 @@ const Nav: FunctionComponent = ({ children }) => {
               ))}
             </HStack>
           </HStack>
-          <Flex alignItems={'center'}>
+          <Flex alignItems='center'>
             <Box p={4}>Rafael Tomás</Box>
-            <Stack direction={'row'} spacing={7} />
+            <Stack direction='row' spacing={7} />
             <Button onClick={toggleColorMode}>
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
@@ -60,7 +59,7 @@ const Nav: FunctionComponent = ({ children }) => {
 
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
+            <Stack as='nav' spacing={4}>
               {Links.map(({ url, label }) => (
                 <NavLink key={url} url={url} label={label} />
               ))}
@@ -68,8 +67,7 @@ const Nav: FunctionComponent = ({ children }) => {
           </Box>
         ) : null}
       </Box>
-      <Box p={4}>{children}</Box>
-
+      <Flex direction="column" gap={4}>{children}</Flex>
     </>
   );
 };

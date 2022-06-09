@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
-import { About, Footer, Hero, Nav, Skills } from './components';
+import { About, Footer, Hero, Nav, Skills, Projects } from './components';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Hero />
         <About />
         <Skills/>
+        <Projects/>
       </Nav>
       <Footer />
     </ChakraProvider>
