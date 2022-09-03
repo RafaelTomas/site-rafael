@@ -54,7 +54,7 @@ function Contact() {
                 justify="space-around"
                 direction={{ base: 'row', md: 'column' }}>
                 <Tooltip
-                  label={hasCopied ? 'Email Copied!' : 'Copy Email'}
+                  label={hasCopied ? 'Email Copiado!' : 'Copiar Email'}
                   closeOnClick={false}
                   hasArrow>
                   <IconButton
@@ -110,11 +110,11 @@ function Contact() {
                 shadow="base">
                 <VStack spacing={5}>
                   <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Nome</FormLabel>
 
                     <InputGroup>
                       <InputLeftElement><BsPerson/></InputLeftElement>
-                      <Input type="text" name="name" placeholder="Your Name" />
+                      <Input type="text" name="name" placeholder="Seu nome" />
                     </InputGroup>
                   </FormControl>
 
@@ -126,17 +126,17 @@ function Contact() {
                       <Input
                         type="email"
                         name="email"
-                        placeholder="Your Email"
+                        placeholder="Seu Email"
                       />
                     </InputGroup>
                   </FormControl>
 
                   <FormControl isRequired>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>Mensagem</FormLabel>
 
                     <Textarea
                       name="message"
-                      placeholder="Your Message"
+                      placeholder="Sua mensagem"
                       rows={6}
                       resize="none"
                     />
@@ -150,7 +150,7 @@ function Contact() {
                       bg: 'blue.500',
                     }}
                   >
-                    Send Message
+                    Enviar mensagem
                   </Button>
                 </VStack>
               </Box>
